@@ -2,8 +2,8 @@
 
 tput bold setaf 4
 echo -e "\n"
-echo \""He who knows, does not speak. He who speaks, does not know."\";
+echo \""Identify your problems, but give your power and energy to solutions."\";
 tput setaf 3
-echo -e "\n\t- "Lao Tzu"\n\n"
+echo -e "\n\t- "Tony Robbins"\n\n"
 tput sgr0
 

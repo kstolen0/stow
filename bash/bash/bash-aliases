@@ -1,0 +1,15 @@
+#!/bin/bash
+
+alias bat="batcat"
+
+alias ll="ls -l"
+alias l.="ls -A"
+alias ll.="ls -Al"
+alias clr="clear"
+
+alias .b=". ~/.bashrc"
+alias eb="nvim ~/.bashrc" 
+
+alias copy="xclip -selection clipboard"
+
+
