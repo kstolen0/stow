@@ -11,3 +11,7 @@
 	editor = nvim
 [init]
 	defaultBranch = main
+[alias]
+	s = status
+	ac = !git add . && git commit -m
+	fp = push --force
