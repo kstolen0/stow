@@ -61,7 +61,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- set the number of columns occupied by a tab character
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -191,7 +191,7 @@ require('lazy').setup({
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
-
+  --
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
@@ -361,6 +361,7 @@ require('lazy').setup({
     end,
   },
 
+  --[[
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -557,7 +558,53 @@ require('lazy').setup({
     end,
   },
 
-  { -- Autoformat
+--]]
+  {{
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v4.x',
+    lazy = true,
+    config = false,
+  },
+
+  {
+    'neovim/nvim-lspconfig',
+    cmd = 'LspInfo',
+    event = {'BufReadPre', 'BufNewFile'},
+    dependencies = {
+    {'hrsh7th/cmp-nvim-lsp'},
+    },
+      config = function() 
+        local lsp_zero = require('lsp-zero')
+
+      local lsp_attach = function(client, bufnr)
+        local opts = {buffer= bufnr}
+          vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+          vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+          vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
+          vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+          vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
+          vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+          vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+          vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+          vim.keymap.set({'n', 'v'}, '<leader>f', '<cmd>lua vim.lsp.buf.format({ async = true })<cr>', opts)
+          vim.keymap.set('n', 'ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+
+        end
+
+      lsp_zero.extend_lspconfig({
+          sign_text = true,
+          lsp_attach = lsp_attach,
+          capabilities = require('cmp_nvim_lsp').default_capabilities()
+      })
+
+     require('lspconfig').gopls.setup({})
+
+    end
+  },
+  },
+
+
+  --[[{ -- Autoformat
     'stevearc/conform.nvim',
     lazy = false,
     keys = {
@@ -593,6 +640,7 @@ require('lazy').setup({
       },
     },
   },
+  --]]
 
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
