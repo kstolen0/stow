@@ -6,7 +6,10 @@ parse_git_branch() {
 # set ps1 prompt + colors
 export PS1='\[\033[1;36m\]\u\[\033[1;31m\] \[\033[1;35m\]\w\[\033[1;33m\]$(parse_git_branch)\[\033[1;31m\]\$\[\033[0m\] '
 
-export PATH=~/bin:"$PATH"
+
+if [[ "$PATH" != *"$HOME/bin"* ]]; then 
+	export PATH="$HOME"/bin:"$PATH"
+fi
 
 eval "$(fzf --bash)"
 
