@@ -2,10 +2,8 @@
 	email = "kstolen0@gmail.com"
 	name = "Kristian Stolen"
 [credential "https://github.com"]
-	helper = 
 	helper = !/run/current-system/sw/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/run/current-system/sw/bin/gh auth git-credential
 [core]
 	editor = nvim
@@ -15,3 +13,4 @@
 	s = status
 	ac = !git add . && git commit -m
 	fp = push --force
+	rom = pull origin main --rebase
