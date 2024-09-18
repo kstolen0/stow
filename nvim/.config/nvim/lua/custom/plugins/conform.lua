@@ -1,6 +1,3 @@
-return {}
-
---[[
 return { -- Autoformat
     'stevearc/conform.nvim',
     lazy = false,
@@ -38,4 +35,3 @@ return { -- Autoformat
     },
   }
 
---]]

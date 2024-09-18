@@ -1,4 +1,3 @@
-
 vim.keymap.set('n', 'j', 'jzz')
 vim.keymap.set('n', 'k', 'kzz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -7,6 +6,9 @@ vim.keymap.set('n', 'G', 'Gzz')
 vim.keymap.set('n', '``', '``zz')
 vim.keymap.set('n', '`.', '`.zz')
 vim.keymap.set('n', '%', '%zz')
+vim.keymap.set('n', '<leader>-', '<C-^>')
+
+vim.keymap.set('i', '<CR>', '<CR><Esc>zza')
 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
@@ -48,5 +50,3 @@ vim.keymap.set('n', 'sc', 'z=', { desc = 'Check spelling under current word' })
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', 'kj', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
-
