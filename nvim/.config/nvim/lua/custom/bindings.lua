@@ -8,7 +8,7 @@ vim.keymap.set('n', '`.', '`.zz')
 vim.keymap.set('n', '%', '%zz')
 vim.keymap.set('n', '<leader>-', '<C-^>')
 
-vim.keymap.set('i', '<CR>', '<CR><Esc>zza')
+vim.keymap.set('i', '<CR>', '<CR><Esc>zzi')
 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
