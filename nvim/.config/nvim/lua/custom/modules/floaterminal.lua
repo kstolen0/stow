@@ -1,5 +1,7 @@
 local function open_floating_terminal()
-  pcall(vim.cmd 'lcd %:p:h')
+  pcall(function()
+    vim.cmd 'lcd %:p:h'
+  end)
   local buf = vim.api.nvim_create_buf(false, true)
   -- vim.api.nvim_set_option_value('buftype', 'terminal', { buf = buf })
   local width = vim.api.nvim_get_option 'columns'
