@@ -12,5 +12,6 @@
 [alias]
 	s = status
 	ac = !git add . && git commit -m
+	cam = commit -am
 	fp = push --force
 	rom = pull origin main --rebase

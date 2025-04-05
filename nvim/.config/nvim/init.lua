@@ -5,6 +5,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require 'custom.bindings'
+require 'custom.modules.floaterminal'
 
 vim.g.netrw_banner = 0
 
@@ -272,6 +273,7 @@ require('lazy').setup({
         require('lspconfig').gopls.setup {}
         require('lspconfig').nixd.setup {}
         require('lspconfig').terraformls.setup {}
+        require('lspconfig').yamlls.setup {}
       end,
     },
   },

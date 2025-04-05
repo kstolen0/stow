@@ -26,13 +26,12 @@ vim.keymap.set('n', '<leader>uc', 'gUiw')
 vim.keymap.set('n', '<leader>lc', 'guiw')
 
 -- saving controls
-vim.keymap.set('i', 'kj', '<Esc>:w<CR>')
 vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
 vim.keymap.set('n', '<leader>kj', 'kj:w<CR>')
 
 -- manage terminal
 vim.keymap.set('n', '<leader>t', function()
-  vim.cmd.terminal()
+  vim.cmd 'Floaterm'
 end, { desc = 'open terminal' })
 
 -- close current buffer
