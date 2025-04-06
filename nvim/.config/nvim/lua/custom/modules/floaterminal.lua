@@ -28,4 +28,9 @@ local function open_floating_terminal()
   vim.fn.termopen(os.getenv 'SHELL')
 end
 
+vim.api.nvim_create_autocmd({ 'TermOpen', 'BufWinEnter' }, {
+  pattern = 'term://*',
+  command = 'startinsert',
+})
+
 vim.api.nvim_create_user_command('Floaterm', open_floating_terminal, {})
