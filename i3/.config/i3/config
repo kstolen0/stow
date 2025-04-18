@@ -26,6 +26,8 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+exec --no-startup-id nitrogen --restore
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -53,6 +55,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+p exec flameshot gui -p ~/Pictures/screenshots 
 
 # kill focused window
 bindsym $mod+Shift+q kill
