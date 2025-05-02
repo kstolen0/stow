@@ -26,7 +26,7 @@ vim.keymap.set('n', '<leader>uc', 'gUiw')
 vim.keymap.set('n', '<leader>lc', 'guiw')
 
 -- saving controls
-vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
+-- vim.keymap.set('i', '<Esc>', '<Esc>:w<CR>')
 vim.keymap.set('n', '<leader>kj', 'kj:w<CR>')
 
 -- manage terminal
