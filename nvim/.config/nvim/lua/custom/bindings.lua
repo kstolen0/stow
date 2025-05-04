@@ -30,7 +30,7 @@ vim.keymap.set('n', '<leader>lc', 'guiw')
 vim.keymap.set('n', '<leader>kj', 'kj:w<CR>')
 
 -- manage terminal
-vim.keymap.set('n', '<leader>t', function()
+vim.keymap.set('n', '<leader>ft', function()
   vim.cmd 'Floaterm'
 end, { desc = 'open terminal' })
 
