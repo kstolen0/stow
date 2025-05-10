@@ -1,0 +1,35 @@
+(defalias 
+  ;; top row
+  sq (tap-hold $tap-time $hold-time ` S-`)			;; map to ` ~
+  at S-2
+  hsh S-3
+	sw (tap-hold $tap-time $hold-time S-, S-.)		;; map to < >
+  dlr S-4
+
+  sj (tap-hold $tap-time $hold-time + -)				;; map to + -
+
+  ;; middle row
+	sa (tap-hold $tap-time $hold-time - S--)			;; map to - _
+  ss (tap-hold $tap-time $hold-time ' S-')			;; map to ' "
+  sh (tap-hold $tap-time $hold-time S-[ S-])		;; map to { }
+  st (tap-hold $tap-time $hold-time S-9 S-0)  	;; map to ( )
+	sg (tap-hold $tap-time $hold-time S-1 S-/) 		;; map to ? !
+
+	sy (tap-hold $tap-time $hold-time S-8 /)			;; map to * / 
+  si (tap-hold $tap-time $hold-time . \)				;; map to . \
+
+  ;; bottom row
+  sm (tap-hold $tap-time $hold-time ; S-;)			;; map to ; :
+  sc (tap-hold $tap-time $hold-time [ ])				;; map to [ ]
+  sv (tap-hold $tap-time $hold-time S-7 S-\)		;; map to & |
+	sk (tap-hold $tap-time $hold-time S-5 S-6)		;; map to % ^
+)
+
+(deflayer (symnum)
+  grv  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX    XX   XX    XX
+  tab  @sq  @at  @hsh @sw  @dlr @sj  7    8    9    0     XX   XX    XX
+  caps @sa  @ss  @sh  @st  @sg  @sy  4    5    6    @si   XX    XX
+	lsft del  tab  @sm  @sc  @sv  @sk  1    2    3    =  rsft
+  lctl lalt lmet          spc             rmet ralt 
+  left up down right
+)
