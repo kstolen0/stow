@@ -1,6 +1,6 @@
 (defalias
 
-	; (tap-hold $tap-time $hold-time = S-;) 
+  ; (tap-hold $tap-time $hold-time = S-;) 
 
   a (tap-hold $tap-time $hold-time a lalt)
   s (tap-hold $tap-time $hold-time s lmet)
@@ -15,19 +15,19 @@
   x (tap-hold $tap-time $hold-time x (layer-while-held nav))
   m (tap-hold $tap-time $hold-time m (layer-while-held symnum))
   v (tap-hold $tap-time $hold-time v esc)
-	, (tap-hold $tap-time $hold-time , (layer-while-held symnum))
-	. (tap-hold $tap-time $hold-time . (layer-while-held nav))
+  , (tap-hold $tap-time $hold-time , (layer-while-held symnum))
+  . (tap-hold $tap-time $hold-time . (layer-while-held nav))
 
   up (tap-hold $tap-time $hold-time pgup up)
   dn (tap-hold $tap-time $hold-time pgdn down)
-	spc (tap-hold $tap-time $hold-time spc (layer-while-held symnum))
+  spc (tap-hold $tap-time $hold-time spc (layer-while-held symnum))
 )
 
 (deflayer (workman)
   grv  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX    XX   XX   bspc
   tab  q    d    r    w    b    j    f    u    p    @;    XX   XX    XX
   caps @a   @s   @h   @t   g    y    @n   @e   @o   @i    ret  XX
-	lsft z    @x   @m   c    @v    k    l   @,   @.    /    rsft
+  lsft z    @x   @m   c    @v    k    l   @,   @.    /    rsft
   lctl lalt lmet          @spc             rmet ralt 
   left @up @dn right
 )
