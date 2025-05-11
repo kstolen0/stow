@@ -1,9 +1,9 @@
 
 (deflayer (nav)
-  grv  XX    XX    XX    XX    XX  XX       XX      XX    XX  XX     XX    XX    bspc
-  tab  XX    XX    XX    XX    XX  XX       XX      XX    XX  XX     XX    XX    XX
-  caps lalt  lmet  lctl  lsft  XX  XX       left    down  up  right  XX    ret
-	lsft XX    XX    XX    XX    XX  C-pgup  C-pgdn  XX    XX XX    rsft
+  tab  XX    XX    XX    XX    XX  XX       XX      XX    XX  XX     XX    XX   XX
+  caps lalt  lmet  lctl  lsft  XX  XX       left    down  up  right  XX    ret  XX
+	lsft XX    XX    XX    XX    XX  C-pgup   C-pgdn  XX    XX  XX     rsft  XX
+  grv  XX    XX    XX    XX    XX  XX       XX      XX    XX  XX     XX 
   lctl lalt  lmet          spc                       rmet ralt 
   left up down right
 )
