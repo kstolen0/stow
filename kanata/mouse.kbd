@@ -1,0 +1,9 @@
+;; unsupported currently
+(deflayer mouse
+ XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+ XX  XX    XX    XX    XX    XX    XX    mrgt  mbck  mfwd  mlft  XX    XX    XX
+ XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+ XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+ XX  XX    XX          XX                                  XX    XX 
+ XX  XX    XX    XX
+)

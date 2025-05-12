@@ -14,7 +14,7 @@
 
   x (tap-hold $tap-time $hold-time x (layer-while-held nav))
   m (tap-hold $tap-time $hold-time m (layer-while-held symnum))
-  v (tap-hold $tap-time $hold-time v esc)
+  q (tap-hold $tap-time $hold-time v esc)
   , (tap-hold $tap-time $hold-time , (layer-while-held symnum))
   . (tap-hold $tap-time $hold-time . (layer-while-held nav))
 
@@ -22,13 +22,15 @@
   dn (tap-hold $tap-time $hold-time pgdn down)
   spc (tap-hold $tap-time $hold-time spc (layer-while-held symnum))
 	l2 (layer-while-held symnum)
+	c (tap-hold $tap-time $hold-time c (layer-while-held mouse))
+	cft C-M-A-c
 )
 
 (deflayer (workman)
-  caps q    d    r    w    b    XX   j   f   u    p     @;    XX  XX
+  caps @q   d    r    w    b    XX   j   f   u    p     @;    XX  XX
   caps @a   @s   @h   @t   g    y    @n  @e  @o   @i    ret   XX  XX
-  lsft z    @x   @m   c    @v   k    l   @,  @.   /     rsft  XX
-  grv  XX   XX   XX   ret  spc  @l2  XX  XX   XX   XX    XX
+  lsft z    @x   @m   c    v    k    l   @,  @.   /     rsft  XX
+  @cft XX   XX   XX   ret  spc  @l2  XX  XX   XX   XX    XX
   lctl lalt lmet           @spc            rmet ralt 
   left @up @dn right
 )

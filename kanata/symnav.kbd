@@ -26,7 +26,7 @@
 )
 
 (deflayer (symnum)
-  tab  @sq  @at  @hsh @sw  @dlr @sj  7    8    9    0     XX    XX  XX
+  tab  @sq  @at  @hsh @sw  @dlr XX   @sj  7    8    9     0     XX    XX
   caps @sa  @ss  @sh  @st  @sg  @sy  4    5    6    @si   XX    XX  XX
   lsft del  tab  @sm  @sc  @sv  @sk  1    2    3    =     rsft  XX
   grv  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX    XX 
