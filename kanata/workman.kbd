@@ -14,7 +14,7 @@
 
   x (tap-hold $tap-time $hold-time x (layer-while-held nav))
   m (tap-hold $tap-time $hold-time m (layer-while-held symnum))
-  q (tap-hold $tap-time $hold-time v esc)
+  q (tap-hold $tap-time $hold-time q esc)
   , (tap-hold $tap-time $hold-time , (layer-while-held symnum))
   . (tap-hold $tap-time $hold-time . (layer-while-held nav))
 
