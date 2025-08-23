@@ -9,9 +9,17 @@
 	editor = nvim
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
 [alias]
 	s = status -s
+	r = restore
+	cfg = config --global 
 	ac = !git add . && git commit -m
 	cam = commit -am
 	fp = push --force
 	rom = pull origin main --rebase
+	cm = checkout main
+	nb = checkout -b
+[url "https://github.com/kstolen0/"]
+   insteadOf = "me:"

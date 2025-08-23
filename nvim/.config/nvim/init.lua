@@ -21,6 +21,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.title = true
+vim.opt.spell = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -268,6 +269,7 @@ require('lazy').setup({
         require('lspconfig').nixd.setup {}
         require('lspconfig').terraformls.setup {}
         require('lspconfig').yamlls.setup {}
+        require('lspconfig').ts_ls.setup {}
       end,
     },
   },
