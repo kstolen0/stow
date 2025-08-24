@@ -28,9 +28,9 @@
 
 (deflayer (workman)
   caps @q   d    r    w    b    XX   j   f   u    p     @;    XX  XX
-  caps @a   @s   @h   @t   g    y    @n  @e  @o   @i    ret   XX  XX
+  caps @a   @s   @h   t    g    y    n   @e  @o   @i    ret   XX  XX
   lsft z    @x   @m   c    v    k    l   @,  @.   /     rsft  XX
-  @cft XX   XX   XX   ret  spc  @l2  XX  XX   XX   XX    XX
+  @cft XX   XX   XX   lsft spc  XX  XX  XX   XX   XX    XX
   lctl lalt lmet           @spc            rmet ralt 
   left @up @dn right
 )
