@@ -13,15 +13,21 @@
   i (tap-hold $tap-time $hold-time i ralt)
 
   x (tap-hold $tap-time $hold-time x (layer-while-held nav))
-  m (tap-hold $tap-time $hold-time m (layer-while-held symnum))
+  m (tap-hold $tap-time $hold-time m (layer-while-held sym))
   q (tap-hold $tap-time $hold-time q esc)
-  , (tap-hold $tap-time $hold-time , (layer-while-held symnum))
+  , (tap-hold $tap-time $hold-time , (layer-while-held sym))
   . (tap-hold $tap-time $hold-time . (layer-while-held nav))
+	z (tap-hold $tap-time $hold-time z (layer-while-held num))
+	sn (tap-hold $tap-time $hold-time / (layer-while-held num))
+	
+	lsw (layer-switch workman)
+  lss (layer-switch sym)
+  lsn (layer-switch num)
 
   up (tap-hold $tap-time $hold-time pgup up)
   dn (tap-hold $tap-time $hold-time pgdn down)
-  spc (tap-hold $tap-time $hold-time spc (layer-while-held symnum))
-	l2 (layer-while-held symnum)
+  spc (tap-hold $tap-time $hold-time spc (layer-while-held sym))
+	l2 (layer-while-held sym)
 	c (tap-hold $tap-time $hold-time c (layer-while-held mouse))
 	cft C-M-A-c
 )
@@ -29,9 +35,9 @@
 (deflayer (workman)
   caps @q   d    r    w    b    XX   j   f   u    p     @;    XX  XX
   caps @a   @s   @h   t    g    y    n   @e  @o   @i    ret   XX  XX
-  lsft z    @x   @m   c    v    k    l   @,  @.   /     rsft  XX
-  @cft XX   XX   XX   lsft spc  XX  XX  XX   XX   XX    XX
-  lctl lalt lmet           @spc            rmet ralt 
+  lsft @z   @x   @m   c    v    k    l   @,  @.   /     rsft  XX
+  @cft XX   XX   XX   lsft spc  rsft XX  XX   XX   XX   XX
+  @lsw @lss @lsn           @spc            rmet ralt 
   left @up @dn right
 )
 

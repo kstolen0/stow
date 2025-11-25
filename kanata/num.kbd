@@ -1,0 +1,8 @@
+(deflayer (num)
+ XX  XX    XX    S-3   \     -     S-=    7    8    9    0    XX    XX    XX
+ XX  lalt  lmet  lctl  lsft  /     S-8    4    5    6    .    XX    XX    XX
+ XX  XX    XX    XX    XX    S-6   S-5    1    2    3    =    XX    XX
+ XX  XX    XX    XX    XX    XX    XX   XX   XX   XX   XX   XX
+ @lsw @lss @lsn        XX          XX    XX 
+ XX  XX    XX    XX
+)

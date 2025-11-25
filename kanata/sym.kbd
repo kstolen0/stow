@@ -1,0 +1,9 @@
+(deflayer (sym)
+ XX  `     S-2   S-3   S-`   S-4   XX    .     1     2     3     0     XX    XX
+ XX  -     '     S-[   S-9   S-1   S-/   S-0   S-]   S-'   S--   XX    XX    XX
+ XX  S-8   S-6   ;     [     S-7   S-\   ]     S-;   S-5   caps  XX    XX
+ XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+ @lsw @lss @lsn        XX          XX    XX 
+ XX   XX   XX    XX
+)
+

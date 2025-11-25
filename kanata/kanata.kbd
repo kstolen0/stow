@@ -21,6 +21,7 @@
 )
 
 (include workman.kbd)
-(include symnav.kbd)
+(include sym.kbd)
+(include num.kbd)
 (include nav.kbd)
 (include mouse.kbd)

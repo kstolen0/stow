@@ -145,12 +145,6 @@ require('lazy').setup({
   },
 
   {
-    {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v4.x',
-      lazy = true,
-      config = false,
-    },
     { -- Autocompletion
       'hrsh7th/nvim-cmp',
       event = 'InsertEnter',
@@ -245,9 +239,8 @@ require('lazy').setup({
         { 'folke/neodev.nvim', opts = {} },
       },
       config = function()
-        local lsp_zero = require 'lsp-zero'
-
         local opts = { buffer = bufnr }
+
         vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
         vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, opts)
         vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
@@ -259,21 +252,18 @@ require('lazy').setup({
         vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({ async = true })<cr>', opts)
         vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 
+        vim.lsp.enable 'ts_ls'
+        vim.lsp.enable 'lua_ls'
+        vim.lsp.enable 'cssls'
+        vim.lsp.enable 'terraform_lsp'
+        vim.lsp.enable 'gopls'
+
         local capabilityOverrides = {
           dynamicRegistration = true,
         }
-
-        lsp_zero.extend_lspconfig {}
-
-        require('lspconfig').gopls.setup {}
-        require('lspconfig').nixd.setup {}
-        require('lspconfig').terraformls.setup {}
-        require('lspconfig').yamlls.setup {}
-        require('lspconfig').ts_ls.setup {}
       end,
     },
   },
-
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'custom.plugins' },
